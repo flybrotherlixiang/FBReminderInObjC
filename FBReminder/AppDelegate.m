@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FBMainViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[FBMainViewController alloc] init]];
+    self.window.rootViewController = nav;
+    [self.window makeKeyWindow];
+    
     return YES;
 }
 

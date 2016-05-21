@@ -1,0 +1,32 @@
+PODS:
+  - ACEExpandableTextCell (1.0.4):
+    - SZTextView
+  - Masonry (1.0.0)
+  - Realm (0.102.1):
+    - Realm/Headers (= 0.102.1)
+  - Realm/Headers (0.102.1)
+  - SZTextView (1.2.2)
+  - UITableView+FDTemplateLayoutCell (1.4)
+  - YYText (1.0.5)
+  - ZCAnimatedLabel (0.0.4)
+
+DEPENDENCIES:
+  - ACEExpandableTextCell
+  - Masonry
+  - Realm
+  - UITableView+FDTemplateLayoutCell
+  - YYText
+  - ZCAnimatedLabel
+
+SPEC CHECKSUMS:
+  ACEExpandableTextCell: 02c1fdb5a57344f543c9536c8c985ffcca1ed8b2
+  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  Realm: 5254be610db3e5024879684717bf038990bb59ec
+  SZTextView: 3a81174dce0710a9ab069bc73a813e6df53b9c82
+  UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
+  YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
+  ZCAnimatedLabel: 519b688bef4403fd356bc785f9b61cdfd8e6472d
+
+PODFILE CHECKSUM: 8cd61f0c7508aa7c8c0c08d26e74665d7304aa24
+
+COCOAPODS: 1.0.0

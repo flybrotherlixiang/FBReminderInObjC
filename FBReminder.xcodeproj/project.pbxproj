@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		5313CA6A1CEF59EC00381588 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5313CA691CEF59EC00381588 /* main.m */; };
 		5313CA6D1CEF59EC00381588 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5313CA6C1CEF59EC00381588 /* AppDelegate.m */; };
-		5313CA701CEF59EC00381588 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5313CA6F1CEF59EC00381588 /* ViewController.m */; };
-		5313CA731CEF59EC00381588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5313CA711CEF59EC00381588 /* Main.storyboard */; };
 		5313CA751CEF59ED00381588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5313CA741CEF59ED00381588 /* Assets.xcassets */; };
 		5313CA781CEF59ED00381588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5313CA761CEF59ED00381588 /* LaunchScreen.storyboard */; };
 		5313CA831CEF59ED00381588 /* FBReminderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5313CA821CEF59ED00381588 /* FBReminderTests.m */; };
 		5313CA8E1CEF59ED00381588 /* FBReminderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5313CA8D1CEF59ED00381588 /* FBReminderUITests.m */; };
+		5313CAA11CEF5B8C00381588 /* FBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5313CAA01CEF5B8C00381588 /* FBMainViewController.m */; };
+		5313CAA51CEF5C0600381588 /* FBReminderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5313CAA41CEF5C0600381588 /* FBReminderItem.m */; };
+		5316E6DF1CEF5E2D006DC2B3 /* FBNewReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5316E6DE1CEF5E2D006DC2B3 /* FBNewReminderViewController.m */; };
+		53B1A8001CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B1A7FF1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m */; };
+		53B1A8031CF06597002DFB04 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53B1A8021CF06597002DFB04 /* Image.xcassets */; };
+		5F80679F60F7CBD59FC03DEE /* libPods-FBReminderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF6B9A260B298C0E3F187D3 /* libPods-FBReminderTests.a */; };
+		701EA992FD9EBC6FCC4F5081 /* libPods-FBReminder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FF52626131FE70613B2CF5 /* libPods-FBReminder.a */; };
+		AECB4D38BD27821ADD1D11AB /* libPods-FBReminderUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B17E982D0BD76F1807B72C81 /* libPods-FBReminderUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04D7642B4326FE4FE6E96B5E /* Pods-FBReminderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBReminderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBReminderTests/Pods-FBReminderTests.release.xcconfig"; sourceTree = "<group>"; };
+		08522122B31AEDBF636EB86C /* Pods-FBReminderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBReminderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBReminderUITests/Pods-FBReminderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2089BDFAD117AAC753E968DC /* Pods-FBReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBReminder.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBReminder/Pods-FBReminder.release.xcconfig"; sourceTree = "<group>"; };
+		4AF6B9A260B298C0E3F187D3 /* libPods-FBReminderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FBReminderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5313CA651CEF59EC00381588 /* FBReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5313CA691CEF59EC00381588 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5313CA6B1CEF59EC00381588 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5313CA6C1CEF59EC00381588 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5313CA6E1CEF59EC00381588 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5313CA6F1CEF59EC00381588 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5313CA721CEF59EC00381588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5313CA741CEF59ED00381588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5313CA771CEF59ED00381588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5313CA791CEF59ED00381588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +58,20 @@
 		5313CA891CEF59ED00381588 /* FBReminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBReminderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5313CA8D1CEF59ED00381588 /* FBReminderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBReminderUITests.m; sourceTree = "<group>"; };
 		5313CA8F1CEF59ED00381588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5313CA9F1CEF5B8C00381588 /* FBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBMainViewController.h; sourceTree = "<group>"; };
+		5313CAA01CEF5B8C00381588 /* FBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBMainViewController.m; sourceTree = "<group>"; };
+		5313CAA31CEF5C0600381588 /* FBReminderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBReminderItem.h; sourceTree = "<group>"; };
+		5313CAA41CEF5C0600381588 /* FBReminderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBReminderItem.m; sourceTree = "<group>"; };
+		5316E6DD1CEF5E2D006DC2B3 /* FBNewReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNewReminderViewController.h; sourceTree = "<group>"; };
+		5316E6DE1CEF5E2D006DC2B3 /* FBNewReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBNewReminderViewController.m; sourceTree = "<group>"; };
+		53B1A7FE1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNewReminderTitleTableViewCell.h; sourceTree = "<group>"; };
+		53B1A7FF1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBNewReminderTitleTableViewCell.m; sourceTree = "<group>"; };
+		53B1A8021CF06597002DFB04 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		5507FBFE4CFBC6B3BEA11110 /* Pods-FBReminderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBReminderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBReminderTests/Pods-FBReminderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		920095CC982D638E58426AEE /* Pods-FBReminderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBReminderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBReminderUITests/Pods-FBReminderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A5FF52626131FE70613B2CF5 /* libPods-FBReminder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FBReminder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B17E982D0BD76F1807B72C81 /* libPods-FBReminderUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FBReminderUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD4FB1DCE7185C354B3F4D5 /* Pods-FBReminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBReminder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBReminder/Pods-FBReminder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701EA992FD9EBC6FCC4F5081 /* libPods-FBReminder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F80679F60F7CBD59FC03DEE /* libPods-FBReminderTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +95,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECB4D38BD27821ADD1D11AB /* libPods-FBReminderUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2731D455CDFF8D5B6FF38560 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCD4FB1DCE7185C354B3F4D5 /* Pods-FBReminder.debug.xcconfig */,
+				2089BDFAD117AAC753E968DC /* Pods-FBReminder.release.xcconfig */,
+				5507FBFE4CFBC6B3BEA11110 /* Pods-FBReminderTests.debug.xcconfig */,
+				04D7642B4326FE4FE6E96B5E /* Pods-FBReminderTests.release.xcconfig */,
+				08522122B31AEDBF636EB86C /* Pods-FBReminderUITests.debug.xcconfig */,
+				920095CC982D638E58426AEE /* Pods-FBReminderUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5313CA5C1CEF59EC00381588 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +122,8 @@
 				5313CA811CEF59ED00381588 /* FBReminderTests */,
 				5313CA8C1CEF59ED00381588 /* FBReminderUITests */,
 				5313CA661CEF59EC00381588 /* Products */,
+				2731D455CDFF8D5B6FF38560 /* Pods */,
+				5B4C1262B31375F7F2E80613 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +140,12 @@
 		5313CA671CEF59EC00381588 /* FBReminder */ = {
 			isa = PBXGroup;
 			children = (
+				53B1A8011CF06586002DFB04 /* Resource */,
+				5313CAA21CEF5BED00381588 /* Model */,
+				53B1A7FD1CF05EF9002DFB04 /* View */,
+				5313CA9E1CEF5B8100381588 /* ViewController */,
 				5313CA6B1CEF59EC00381588 /* AppDelegate.h */,
 				5313CA6C1CEF59EC00381588 /* AppDelegate.m */,
-				5313CA6E1CEF59EC00381588 /* ViewController.h */,
-				5313CA6F1CEF59EC00381588 /* ViewController.m */,
-				5313CA711CEF59EC00381588 /* Main.storyboard */,
 				5313CA741CEF59ED00381588 /* Assets.xcassets */,
 				5313CA761CEF59ED00381588 /* LaunchScreen.storyboard */,
 				5313CA791CEF59ED00381588 /* Info.plist */,
@@ -140,6 +180,61 @@
 			path = FBReminderUITests;
 			sourceTree = "<group>";
 		};
+		5313CA9E1CEF5B8100381588 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5327F74E1CF059FD00DB6930 /* Create */,
+				5313CA9F1CEF5B8C00381588 /* FBMainViewController.h */,
+				5313CAA01CEF5B8C00381588 /* FBMainViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		5313CAA21CEF5BED00381588 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5313CAA31CEF5C0600381588 /* FBReminderItem.h */,
+				5313CAA41CEF5C0600381588 /* FBReminderItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5327F74E1CF059FD00DB6930 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				5316E6DD1CEF5E2D006DC2B3 /* FBNewReminderViewController.h */,
+				5316E6DE1CEF5E2D006DC2B3 /* FBNewReminderViewController.m */,
+			);
+			name = Create;
+			sourceTree = "<group>";
+		};
+		53B1A7FD1CF05EF9002DFB04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53B1A7FE1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.h */,
+				53B1A7FF1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		53B1A8011CF06586002DFB04 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				53B1A8021CF06597002DFB04 /* Image.xcassets */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		5B4C1262B31375F7F2E80613 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF52626131FE70613B2CF5 /* libPods-FBReminder.a */,
+				4AF6B9A260B298C0E3F187D3 /* libPods-FBReminderTests.a */,
+				B17E982D0BD76F1807B72C81 /* libPods-FBReminderUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5313CA921CEF59ED00381588 /* Build configuration list for PBXNativeTarget "FBReminder" */;
 			buildPhases = (
+				F9751047DC74DF04C06DE78A /* 📦 Check Pods Manifest.lock */,
 				5313CA611CEF59EC00381588 /* Sources */,
 				5313CA621CEF59EC00381588 /* Frameworks */,
 				5313CA631CEF59EC00381588 /* Resources */,
+				2A72E6E331519A4DE37EE68D /* 📦 Embed Pods Frameworks */,
+				880EC3967E626423FC7BB89C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +262,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5313CA951CEF59ED00381588 /* Build configuration list for PBXNativeTarget "FBReminderTests" */;
 			buildPhases = (
+				C1DFBD5EAA91ABF94BDC179E /* 📦 Check Pods Manifest.lock */,
 				5313CA7A1CEF59ED00381588 /* Sources */,
 				5313CA7B1CEF59ED00381588 /* Frameworks */,
 				5313CA7C1CEF59ED00381588 /* Resources */,
+				96586EAAD789C8D5545A3589 /* 📦 Embed Pods Frameworks */,
+				92CA855B28757DB9D54496EE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +283,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5313CA981CEF59ED00381588 /* Build configuration list for PBXNativeTarget "FBReminderUITests" */;
 			buildPhases = (
+				F7B8A5BF21C2FD5CC93E8CB8 /* 📦 Check Pods Manifest.lock */,
 				5313CA851CEF59ED00381588 /* Sources */,
 				5313CA861CEF59ED00381588 /* Frameworks */,
 				5313CA871CEF59ED00381588 /* Resources */,
+				9C4B5D75C0585F48E3E2AC2B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,8 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5313CA781CEF59ED00381588 /* LaunchScreen.storyboard in Resources */,
+				53B1A8031CF06597002DFB04 /* Image.xcassets in Resources */,
 				5313CA751CEF59ED00381588 /* Assets.xcassets in Resources */,
-				5313CA731CEF59EC00381588 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,12 +368,138 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A72E6E331519A4DE37EE68D /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBReminder/Pods-FBReminder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		880EC3967E626423FC7BB89C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBReminder/Pods-FBReminder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92CA855B28757DB9D54496EE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBReminderTests/Pods-FBReminderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96586EAAD789C8D5545A3589 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBReminderTests/Pods-FBReminderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C4B5D75C0585F48E3E2AC2B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBReminderUITests/Pods-FBReminderUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1DFBD5EAA91ABF94BDC179E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7B8A5BF21C2FD5CC93E8CB8 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F9751047DC74DF04C06DE78A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5313CA611CEF59EC00381588 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5313CA701CEF59EC00381588 /* ViewController.m in Sources */,
+				5313CAA51CEF5C0600381588 /* FBReminderItem.m in Sources */,
+				5313CAA11CEF5B8C00381588 /* FBMainViewController.m in Sources */,
+				5316E6DF1CEF5E2D006DC2B3 /* FBNewReminderViewController.m in Sources */,
+				53B1A8001CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m in Sources */,
 				5313CA6D1CEF59EC00381588 /* AppDelegate.m in Sources */,
 				5313CA6A1CEF59EC00381588 /* main.m in Sources */,
 			);
@@ -308,14 +537,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5313CA711CEF59EC00381588 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5313CA721CEF59EC00381588 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5313CA761CEF59ED00381588 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -411,9 +632,11 @@
 		};
 		5313CA931CEF59ED00381588 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD4FB1DCE7185C354B3F4D5 /* Pods-FBReminder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FBReminder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "FB-Corp..FBReminder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,9 +645,11 @@
 		};
 		5313CA941CEF59ED00381588 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2089BDFAD117AAC753E968DC /* Pods-FBReminder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FBReminder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "FB-Corp..FBReminder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,6 +658,7 @@
 		};
 		5313CA961CEF59ED00381588 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5507FBFE4CFBC6B3BEA11110 /* Pods-FBReminderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FBReminderTests/Info.plist;
@@ -445,6 +671,7 @@
 		};
 		5313CA971CEF59ED00381588 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04D7642B4326FE4FE6E96B5E /* Pods-FBReminderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FBReminderTests/Info.plist;
@@ -457,6 +684,7 @@
 		};
 		5313CA991CEF59ED00381588 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08522122B31AEDBF636EB86C /* Pods-FBReminderUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FBReminderUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -469,6 +697,7 @@
 		};
 		5313CA9A1CEF59ED00381588 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 920095CC982D638E58426AEE /* Pods-FBReminderUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FBReminderUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -498,6 +727,7 @@
 				5313CA941CEF59ED00381588 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5313CA951CEF59ED00381588 /* Build configuration list for PBXNativeTarget "FBReminderTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +736,7 @@
 				5313CA971CEF59ED00381588 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5313CA981CEF59ED00381588 /* Build configuration list for PBXNativeTarget "FBReminderUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +745,7 @@
 				5313CA9A1CEF59ED00381588 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

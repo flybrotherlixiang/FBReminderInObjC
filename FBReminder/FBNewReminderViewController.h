@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FBNewReminderViewController.h
 //  FBReminder
 //
 //  Created by Xiang Li on 5/20/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface FBNewReminderViewController : UIViewController
 
 @end
-
