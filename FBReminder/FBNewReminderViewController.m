@@ -9,11 +9,13 @@
 
 #import "FBNewReminderViewController.h"
 #import "FBNewReminderTitleTableViewCell.h"
-#import <ACEExpandableTextCell/ACEExpandableTextCell.h>
+#import <SZTextView/SZTextView.h>
+//#import <ACEExpandableTextCell/ACEExpandableTextCell.h>
 #import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 #import <Masonry/Masonry.h>
 
-@interface FBNewReminderViewController () <UITableViewDataSource, UITableViewDelegate, ACEExpandableTableViewDelegate>
+//@interface FBNewReminderViewController () <UITableViewDataSource, UITableViewDelegate, ACEExpandableTableViewDelegate>
+@interface FBNewReminderViewController () <UITableViewDataSource, UITableViewDelegate, FBNewReminderTitleTableViewCellDelegate>
 
 @property (nonatomic) UITableView *tableView;
 
@@ -27,6 +29,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.titleText = @"五点啦要吃药啦";
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:self.tableView];
     [self setUpConstraints];
 }
@@ -52,15 +57,23 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [tableView fd_heightForCellWithIdentifier:NSStringFromClass([FBNewReminderTitleTableViewCell class]) configuration:^(id cell) {
+    CGFloat height =  [tableView fd_heightForCellWithIdentifier:NSStringFromClass([FBNewReminderTitleTableViewCell class]) configuration:^(id cell) {
+        FBNewReminderTitleTableViewCell *aCell = (FBNewReminderTitleTableViewCell *)cell;
+//        aCell.expandableCell.text = self.titleText;
+        aCell.text = self.titleText;
     }];
+
+    return height;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FBNewReminderTitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FBNewReminderTitleTableViewCell class]) forIndexPath:indexPath];
-    cell.expandableCell.text = self.title;
-    cell.expandableCell.expandableTableView = self.tableView;
+//    cell.expandableCell.text = self.titleText;
+//    cell.expandableCell.expandableTableView = self.tableView;
+    cell.text = self.titleText;
+    cell.delegate = self;
+    cell.indexPath = indexPath;
     return cell;
 }
 
@@ -69,6 +82,17 @@
 - (void)tableView:(UITableView *)tableView updatedText:(NSString *)text atIndexPath:(NSIndexPath *)indexPath
 {
     
+}
+
+#pragma mark - FBNewReminderTitleTableViewCellDelegate
+- (void)titleTableViewCell:(FBNewReminderTitleTableViewCell *)cell textViewDidChange:(UITextView *)textView
+{
+    self.titleText = textView.text;
+    NSIndexPath *indexPath = cell.indexPath;
+    if (indexPath) {
+        [self.tableView beginUpdates];
+        [self.tableView endUpdates];
+    }
 }
 
 #pragma mark - Private -
@@ -83,20 +107,40 @@
 {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        
+        [_tableView registerClass:[FBNewReminderTitleTableViewCell class] forCellReuseIdentifier:NSStringFromClass([FBNewReminderTitleTableViewCell class])];
+        
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.dataSource = self;
         _tableView.delegate = self;
-        UIButton *button = [[UIButton alloc] init];
-        [button setTitle:@"Create" forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        button.bounds = CGRectMake(0, 0, CGRectGetWidth(self.view.frame) - 50, 50);
-        button.center = CGPointMake(CGRectGetWidth(self.view.frame) / 2, 30);
-        [button addTarget:self action:@selector(submitButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-        _tableView.tableFooterView = button;
         
-        [_tableView registerClass:[FBNewReminderTitleTableViewCell class] forCellReuseIdentifier:NSStringFromClass([FBNewReminderTitleTableViewCell class])];
+        _tableView.tableFooterView = [self footerView];
     }
     return _tableView;
+}
+
+- (UIView *)footerView
+{
+    UIView *footerContainerView = [[UIView alloc] init];
+    footerContainerView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 100);
+//    footerContainerView.translatesAutoresizingMaskIntoConstraints = NO;
+    footerContainerView.backgroundColor = [UIColor greenColor];
+    UIButton *button = [[UIButton alloc] init];
+    [button setTitle:@"Create" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    button.backgroundColor = [UIColor redColor];
+    button.layer.cornerRadius = 3;
+    button.center = CGPointMake(CGRectGetWidth(self.view.frame) / 2, 30);
+    [button addTarget:self action:@selector(submitButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [footerContainerView addSubview:button];
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(footerContainerView);
+        make.width.equalTo(footerContainerView).offset(-40).priority(MASLayoutPriorityDefaultLow);
+        make.height.equalTo(@50);
+    }];
+    
+    return footerContainerView;
 }
 
 @end

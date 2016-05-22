@@ -19,9 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
+    self.view.backgroundColor = [UIColor whiteColor];
     [self addNewReminderButton];
-    UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:@"create"];
-    
 }
 
 #pragma mark - Private -
@@ -30,7 +29,7 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NewReminderButton"]];
     imageView.bounds = CGRectMake(0, 0, 21, 21);
     imageView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goCreateNewReminder:)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goCreateNewReminder)];
     [imageView addGestureRecognizer:tap];
     UIBarButtonItem *addMoreButton = [[UIBarButtonItem alloc] initWithCustomView:imageView];
     
