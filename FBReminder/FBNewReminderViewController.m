@@ -9,12 +9,9 @@
 
 #import "FBNewReminderViewController.h"
 #import "FBNewReminderTitleTableViewCell.h"
-#import <SZTextView/SZTextView.h>
-//#import <ACEExpandableTextCell/ACEExpandableTextCell.h>
 #import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 #import <Masonry/Masonry.h>
 
-//@interface FBNewReminderViewController () <UITableViewDataSource, UITableViewDelegate, ACEExpandableTableViewDelegate>
 @interface FBNewReminderViewController () <UITableViewDataSource, UITableViewDelegate, FBNewReminderTitleTableViewCellDelegate>
 
 @property (nonatomic) UITableView *tableView;
@@ -59,7 +56,6 @@
 {
     CGFloat height =  [tableView fd_heightForCellWithIdentifier:NSStringFromClass([FBNewReminderTitleTableViewCell class]) configuration:^(id cell) {
         FBNewReminderTitleTableViewCell *aCell = (FBNewReminderTitleTableViewCell *)cell;
-//        aCell.expandableCell.text = self.titleText;
         aCell.text = self.titleText;
     }];
 
@@ -69,10 +65,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FBNewReminderTitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FBNewReminderTitleTableViewCell class]) forIndexPath:indexPath];
-//    cell.expandableCell.text = self.titleText;
-//    cell.expandableCell.expandableTableView = self.tableView;
-    cell.text = self.titleText;
+    cell.placeholderText = @"Title";
     cell.delegate = self;
+    cell.text = self.titleText;
     cell.indexPath = indexPath;
     return cell;
 }
@@ -106,7 +101,7 @@
 - (UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         
         [_tableView registerClass:[FBNewReminderTitleTableViewCell class] forCellReuseIdentifier:NSStringFromClass([FBNewReminderTitleTableViewCell class])];
         
@@ -123,7 +118,6 @@
 {
     UIView *footerContainerView = [[UIView alloc] init];
     footerContainerView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 100);
-//    footerContainerView.translatesAutoresizingMaskIntoConstraints = NO;
     footerContainerView.backgroundColor = [UIColor greenColor];
     UIButton *button = [[UIButton alloc] init];
     [button setTitle:@"Create" forState:UIControlStateNormal];

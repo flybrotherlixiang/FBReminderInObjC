@@ -19,7 +19,7 @@
 @interface FBNewReminderTitleTableViewCell : UITableViewCell
 
 @property (nonatomic) NSString *text;
-@property (nonatomic) UILabel *titleLabel;
+@property (nonatomic) NSString *placeholderText;
 
 @property (nonatomic, weak) id<FBNewReminderTitleTableViewCellDelegate> delegate;
 @property (nonatomic) NSIndexPath *indexPath;

@@ -8,10 +8,10 @@ target 'FBReminder' do
   # Pods for FBReminder
  pod 'Realm'
  pod 'Masonry'
- pod 'ACEExpandableTextCell'
  pod 'YYText'
  pod 'ZCAnimatedLabel'
  pod 'UITableView+FDTemplateLayoutCell'
+ pod 'RPFloatingPlaceholders'
  
   target 'FBReminderTests' do
     inherit! :search_paths

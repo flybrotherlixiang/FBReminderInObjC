@@ -7,11 +7,12 @@
 //
 
 #import "FBNewReminderTitleTableViewCell.h"
+#import <RPFloatingPlaceholders/RPFloatingPlaceholderTextView.h>
 #import <Masonry/Masonry.h>
 
 @interface FBNewReminderTitleTableViewCell () <UITextViewDelegate>
 
-@property (nonatomic) UITextView *textView;
+@property (nonatomic) RPFloatingPlaceholderTextView *textView;
 @property (nonatomic) MASConstraint *heightConstraint;
 
 @end
@@ -21,17 +22,10 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self.contentView addSubview:self.titleLabel];
         [self.contentView addSubview:self.textView];
         
-        [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.contentView).offset(10);
-            make.top.equalTo(self.contentView).offset(10);
-        }];
-        
         [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.trailing.bottom.equalTo(self.contentView);
-            make.top.equalTo(self.titleLabel.mas_bottom).offset(10);
+            make.edges.equalTo(self.contentView).insets(UIEdgeInsetsMake(28, 3, 8, 3));
             self.heightConstraint = make.height.equalTo(@0);
         }];
         
@@ -56,24 +50,16 @@
 {
 #warning TODO:
     CGSize newSize = [self.textView sizeThatFits:CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), CGFLOAT_MAX)];
-    self.heightConstraint.offset = newSize.height;
+    self.heightConstraint.offset = newSize.height + 30;
 }
 
 #pragma mark - Getters & Setters -
-- (UILabel *)titleLabel
-{
-    if (!_titleLabel) {
-        _titleLabel = [[UILabel alloc] init];
-        _titleLabel.font = [UIFont systemFontOfSize:18];
-        _titleLabel.text = @"标题";
-    }
-    return _titleLabel;
-}
-
 - (UITextView *)textView
 {
     if (!_textView) {
-        _textView = [[UITextView alloc] init];
+        _textView = [[RPFloatingPlaceholderTextView alloc] initWithFrame:CGRectMake(0, 20, self.frame.size.width, self.frame.size.height)];
+        _textView.font = [UIFont systemFontOfSize:18];
+        _textView.floatingLabel.font = [UIFont systemFontOfSize:14];
         _textView.delegate = self;
     }
     return _textView;
@@ -88,6 +74,16 @@
 {
     _textView.text = text;
     [self updateSize];
+}
+
+- (NSString *)placeholderText
+{
+    return _textView.placeholder;
+}
+
+- (void)setPlaceholderText:(NSString *)placeholderText
+{
+    _textView.placeholder = placeholderText;
 }
 
 @end
