@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FBNewReminderViewController : UIViewController
+@protocol FBNewReminderFormDelegate;
+
+@interface FBNewReminderViewController : UIViewController <FBNewReminderFormDelegate>
 
 @end

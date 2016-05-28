@@ -9,6 +9,7 @@
 #import "FBNewReminderTitleTableViewCell.h"
 #import <RPFloatingPlaceholders/RPFloatingPlaceholderTextView.h>
 #import <Masonry/Masonry.h>
+#import "FBReminderConstants.h"
 
 @interface FBNewReminderTitleTableViewCell () <UITextViewDelegate>
 
@@ -58,8 +59,8 @@
 {
     if (!_textView) {
         _textView = [[RPFloatingPlaceholderTextView alloc] initWithFrame:CGRectMake(0, 20, self.frame.size.width, self.frame.size.height)];
-        _textView.font = [UIFont systemFontOfSize:18];
-        _textView.floatingLabel.font = [UIFont systemFontOfSize:14];
+        _textView.font = [UIFont systemFontOfSize:kFBReminderCommonFontSize];
+        _textView.floatingLabel.font = [UIFont systemFontOfSize:kFBReminderHintFontSize];
         _textView.delegate = self;
     }
     return _textView;

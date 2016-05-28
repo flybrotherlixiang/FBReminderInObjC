@@ -18,6 +18,8 @@
 		5316E6DF1CEF5E2D006DC2B3 /* FBNewReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5316E6DE1CEF5E2D006DC2B3 /* FBNewReminderViewController.m */; };
 		53B1A8001CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B1A7FF1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m */; };
 		53B1A8031CF06597002DFB04 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53B1A8021CF06597002DFB04 /* Image.xcassets */; };
+		53D1E0991CF991D500A5D0F8 /* FBNewReminderDatePickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E0981CF991D500A5D0F8 /* FBNewReminderDatePickerTableViewCell.m */; };
+		53D1E09E1CF9960100A5D0F8 /* FBNewReminderForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E09D1CF9960100A5D0F8 /* FBNewReminderForm.m */; };
 		5F80679F60F7CBD59FC03DEE /* libPods-FBReminderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF6B9A260B298C0E3F187D3 /* libPods-FBReminderTests.a */; };
 		701EA992FD9EBC6FCC4F5081 /* libPods-FBReminder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FF52626131FE70613B2CF5 /* libPods-FBReminder.a */; };
 		AECB4D38BD27821ADD1D11AB /* libPods-FBReminderUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B17E982D0BD76F1807B72C81 /* libPods-FBReminderUITests.a */; };
@@ -67,6 +69,11 @@
 		53B1A7FE1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNewReminderTitleTableViewCell.h; sourceTree = "<group>"; };
 		53B1A7FF1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBNewReminderTitleTableViewCell.m; sourceTree = "<group>"; };
 		53B1A8021CF06597002DFB04 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		53D1E0971CF991D500A5D0F8 /* FBNewReminderDatePickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNewReminderDatePickerTableViewCell.h; sourceTree = "<group>"; };
+		53D1E0981CF991D500A5D0F8 /* FBNewReminderDatePickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBNewReminderDatePickerTableViewCell.m; sourceTree = "<group>"; };
+		53D1E09B1CF9925000A5D0F8 /* FBReminderConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBReminderConstants.h; sourceTree = "<group>"; };
+		53D1E09C1CF9960100A5D0F8 /* FBNewReminderForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNewReminderForm.h; sourceTree = "<group>"; };
+		53D1E09D1CF9960100A5D0F8 /* FBNewReminderForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBNewReminderForm.m; sourceTree = "<group>"; };
 		5507FBFE4CFBC6B3BEA11110 /* Pods-FBReminderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBReminderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBReminderTests/Pods-FBReminderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		920095CC982D638E58426AEE /* Pods-FBReminderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBReminderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBReminderUITests/Pods-FBReminderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A5FF52626131FE70613B2CF5 /* libPods-FBReminder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FBReminder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +147,7 @@
 		5313CA671CEF59EC00381588 /* FBReminder */ = {
 			isa = PBXGroup;
 			children = (
+				53D1E09B1CF9925000A5D0F8 /* FBReminderConstants.h */,
 				53B1A8011CF06586002DFB04 /* Resource */,
 				5313CAA21CEF5BED00381588 /* Model */,
 				53B1A7FD1CF05EF9002DFB04 /* View */,
@@ -195,6 +203,8 @@
 			children = (
 				5313CAA31CEF5C0600381588 /* FBReminderItem.h */,
 				5313CAA41CEF5C0600381588 /* FBReminderItem.m */,
+				53D1E09C1CF9960100A5D0F8 /* FBNewReminderForm.h */,
+				53D1E09D1CF9960100A5D0F8 /* FBNewReminderForm.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -213,6 +223,8 @@
 			children = (
 				53B1A7FE1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.h */,
 				53B1A7FF1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m */,
+				53D1E0971CF991D500A5D0F8 /* FBNewReminderDatePickerTableViewCell.h */,
+				53D1E0981CF991D500A5D0F8 /* FBNewReminderDatePickerTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -496,7 +508,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D1E0991CF991D500A5D0F8 /* FBNewReminderDatePickerTableViewCell.m in Sources */,
 				5313CAA51CEF5C0600381588 /* FBReminderItem.m in Sources */,
+				53D1E09E1CF9960100A5D0F8 /* FBNewReminderForm.m in Sources */,
 				5313CAA11CEF5B8C00381588 /* FBMainViewController.m in Sources */,
 				5316E6DF1CEF5E2D006DC2B3 /* FBNewReminderViewController.m in Sources */,
 				53B1A8001CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m in Sources */,

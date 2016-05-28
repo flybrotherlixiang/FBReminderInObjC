@@ -1,5 +1,6 @@
 PODS:
   - Masonry (1.0.0)
+  - PDTSimpleCalendar (0.9.1)
   - Realm (0.102.1):
     - Realm/Headers (= 0.102.1)
   - Realm/Headers (0.102.1)
@@ -10,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Masonry
+  - PDTSimpleCalendar (~> 0.9.1)
   - Realm
   - RPFloatingPlaceholders
   - UITableView+FDTemplateLayoutCell
@@ -18,12 +20,13 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  PDTSimpleCalendar: d1c03387678422715dc021aa1a85d70f4d1014f2
   Realm: 5254be610db3e5024879684717bf038990bb59ec
   RPFloatingPlaceholders: 983ea3e4b8d7aee04ce2d3d418a8fa24c3f59061
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
   YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
   ZCAnimatedLabel: 519b688bef4403fd356bc785f9b61cdfd8e6472d
 
-PODFILE CHECKSUM: e48076e0d8576fade3383c7bc1793d2f039e4756
+PODFILE CHECKSUM: 015c6c42070db63d46efa5ca17e2def1368a8788
 
 COCOAPODS: 1.0.0

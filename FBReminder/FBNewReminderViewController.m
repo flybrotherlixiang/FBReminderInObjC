@@ -8,25 +8,22 @@
 //
 
 #import "FBNewReminderViewController.h"
-#import "FBNewReminderTitleTableViewCell.h"
-#import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
+#import "FBNewReminderForm.h"
 #import <Masonry/Masonry.h>
 
-@interface FBNewReminderViewController () <UITableViewDataSource, UITableViewDelegate, FBNewReminderTitleTableViewCellDelegate>
+@interface FBNewReminderViewController ()
 
 @property (nonatomic) UITableView *tableView;
-
-// form data
-@property (nonatomic) NSString *titleText;
+@property (nonatomic) FBNewReminderForm *form;
 
 @end
 
 @implementation FBNewReminderViewController
 
+#pragma mark - Life Cycle -
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.titleText = @"五点啦要吃药啦";
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:self.tableView];
@@ -41,53 +38,11 @@
 }
 
 #pragma mark - Delegate -
-#pragma mark - UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+#pragma mark - FBNewReminderFormDelegate
+- (void)updateTableViewHeight
 {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 1;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    CGFloat height =  [tableView fd_heightForCellWithIdentifier:NSStringFromClass([FBNewReminderTitleTableViewCell class]) configuration:^(id cell) {
-        FBNewReminderTitleTableViewCell *aCell = (FBNewReminderTitleTableViewCell *)cell;
-        aCell.text = self.titleText;
-    }];
-
-    return height;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    FBNewReminderTitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FBNewReminderTitleTableViewCell class]) forIndexPath:indexPath];
-    cell.placeholderText = @"Title";
-    cell.delegate = self;
-    cell.text = self.titleText;
-    cell.indexPath = indexPath;
-    return cell;
-}
-
-#pragma mark - UITableViewDelegate
-#pragma mark - ACEExpandableTableViewDelegate
-- (void)tableView:(UITableView *)tableView updatedText:(NSString *)text atIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
-
-#pragma mark - FBNewReminderTitleTableViewCellDelegate
-- (void)titleTableViewCell:(FBNewReminderTitleTableViewCell *)cell textViewDidChange:(UITextView *)textView
-{
-    self.titleText = textView.text;
-    NSIndexPath *indexPath = cell.indexPath;
-    if (indexPath) {
-        [self.tableView beginUpdates];
-        [self.tableView endUpdates];
-    }
+    [self.tableView beginUpdates];
+    [self.tableView endUpdates];
 }
 
 #pragma mark - Private -
@@ -102,16 +57,22 @@
 {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-        
-        [_tableView registerClass:[FBNewReminderTitleTableViewCell class] forCellReuseIdentifier:NSStringFromClass([FBNewReminderTitleTableViewCell class])];
-        
+        [self.form registerCellClassForTableView:_tableView];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-        
+        _tableView.dataSource = self.form;
+        _tableView.delegate = self.form;
         _tableView.tableFooterView = [self footerView];
     }
     return _tableView;
+}
+
+- (FBNewReminderForm *)form
+{
+    if (!_form) {
+        _form = [[FBNewReminderForm alloc] init];
+        _form.vc = self;
+    }
+    return _form;
 }
 
 - (UIView *)footerView

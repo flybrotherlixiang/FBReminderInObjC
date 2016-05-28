@@ -12,6 +12,7 @@ target 'FBReminder' do
  pod 'ZCAnimatedLabel'
  pod 'UITableView+FDTemplateLayoutCell'
  pod 'RPFloatingPlaceholders'
+ pod 'PDTSimpleCalendar', '~> 0.9.1'
  
   target 'FBReminderTests' do
     inherit! :search_paths
