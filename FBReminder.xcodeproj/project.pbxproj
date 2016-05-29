@@ -16,10 +16,28 @@
 		5313CAA11CEF5B8C00381588 /* FBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5313CAA01CEF5B8C00381588 /* FBMainViewController.m */; };
 		5313CAA51CEF5C0600381588 /* FBReminderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5313CAA41CEF5C0600381588 /* FBReminderItem.m */; };
 		5316E6DF1CEF5E2D006DC2B3 /* FBNewReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5316E6DE1CEF5E2D006DC2B3 /* FBNewReminderViewController.m */; };
+		537EB8EB1CFB33B500085840 /* FBNewReminderDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 537EB8EA1CFB33B500085840 /* FBNewReminderDatePickerViewController.m */; };
+		537EB8EE1CFB348700085840 /* FBPresentNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 537EB8ED1CFB348700085840 /* FBPresentNavigationView.m */; };
 		53B1A8001CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B1A7FF1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m */; };
 		53B1A8031CF06597002DFB04 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53B1A8021CF06597002DFB04 /* Image.xcassets */; };
 		53D1E0991CF991D500A5D0F8 /* FBNewReminderDatePickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E0981CF991D500A5D0F8 /* FBNewReminderDatePickerTableViewCell.m */; };
 		53D1E09E1CF9960100A5D0F8 /* FBNewReminderForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E09D1CF9960100A5D0F8 /* FBNewReminderForm.m */; };
+		53D1E0A41CFB279E00A5D0F8 /* FBNewReminderTimePickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E0A31CFB279E00A5D0F8 /* FBNewReminderTimePickerTableViewCell.m */; };
+		53D1E0A71CFB2A0300A5D0F8 /* KPTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E0A61CFB2A0300A5D0F8 /* KPTimePicker.m */; };
+		53D1E0AA1CFB2A4500A5D0F8 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D1E0A91CFB2A4500A5D0F8 /* Categories.m */; };
+		53D1E0B91CFB2A5B00A5D0F8 /* checkmark_icon_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0AC1CFB2A5B00A5D0F8 /* checkmark_icon_white.png */; };
+		53D1E0BA1CFB2A5B00A5D0F8 /* checkmark_icon_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0AD1CFB2A5B00A5D0F8 /* checkmark_icon_white@2x.png */; };
+		53D1E0BB1CFB2A5B00A5D0F8 /* picker_wheel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0AE1CFB2A5B00A5D0F8 /* picker_wheel@2x.png */; };
+		53D1E0BC1CFB2A5B00A5D0F8 /* picker_wheel_ip4.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0AF1CFB2A5B00A5D0F8 /* picker_wheel_ip4.png */; };
+		53D1E0BD1CFB2A5B00A5D0F8 /* picker_wheel_ip4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0B01CFB2A5B00A5D0F8 /* picker_wheel_ip4@2x.png */; };
+		53D1E0BE1CFB2A5B00A5D0F8 /* round_backarrow_big-high.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0B11CFB2A5B00A5D0F8 /* round_backarrow_big-high.png */; };
+		53D1E0BF1CFB2A5B00A5D0F8 /* round_backarrow_big-high@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0B21CFB2A5B00A5D0F8 /* round_backarrow_big-high@2x.png */; };
+		53D1E0C01CFB2A5B00A5D0F8 /* round_backarrow_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0B31CFB2A5B00A5D0F8 /* round_backarrow_big.png */; };
+		53D1E0C11CFB2A5B00A5D0F8 /* round_backarrow_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0B41CFB2A5B00A5D0F8 /* round_backarrow_big@2x.png */; };
+		53D1E0C21CFB2A5B00A5D0F8 /* schedule_image_moon-high.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0B51CFB2A5B00A5D0F8 /* schedule_image_moon-high.png */; };
+		53D1E0C31CFB2A5B00A5D0F8 /* schedule_image_moon-high@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0B61CFB2A5B00A5D0F8 /* schedule_image_moon-high@2x.png */; };
+		53D1E0C41CFB2A5B00A5D0F8 /* schedule_image_sun-high.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0B71CFB2A5B00A5D0F8 /* schedule_image_sun-high.png */; };
+		53D1E0C51CFB2A5B00A5D0F8 /* schedule_image_sun-high@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53D1E0B81CFB2A5B00A5D0F8 /* schedule_image_sun-high@2x.png */; };
 		5F80679F60F7CBD59FC03DEE /* libPods-FBReminderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF6B9A260B298C0E3F187D3 /* libPods-FBReminderTests.a */; };
 		701EA992FD9EBC6FCC4F5081 /* libPods-FBReminder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FF52626131FE70613B2CF5 /* libPods-FBReminder.a */; };
 		AECB4D38BD27821ADD1D11AB /* libPods-FBReminderUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B17E982D0BD76F1807B72C81 /* libPods-FBReminderUITests.a */; };
@@ -66,6 +84,10 @@
 		5313CAA41CEF5C0600381588 /* FBReminderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBReminderItem.m; sourceTree = "<group>"; };
 		5316E6DD1CEF5E2D006DC2B3 /* FBNewReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNewReminderViewController.h; sourceTree = "<group>"; };
 		5316E6DE1CEF5E2D006DC2B3 /* FBNewReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBNewReminderViewController.m; sourceTree = "<group>"; };
+		537EB8E91CFB33B500085840 /* FBNewReminderDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNewReminderDatePickerViewController.h; sourceTree = "<group>"; };
+		537EB8EA1CFB33B500085840 /* FBNewReminderDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBNewReminderDatePickerViewController.m; sourceTree = "<group>"; };
+		537EB8EC1CFB348700085840 /* FBPresentNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBPresentNavigationView.h; sourceTree = "<group>"; };
+		537EB8ED1CFB348700085840 /* FBPresentNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBPresentNavigationView.m; sourceTree = "<group>"; };
 		53B1A7FE1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNewReminderTitleTableViewCell.h; sourceTree = "<group>"; };
 		53B1A7FF1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBNewReminderTitleTableViewCell.m; sourceTree = "<group>"; };
 		53B1A8021CF06597002DFB04 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
@@ -74,6 +96,25 @@
 		53D1E09B1CF9925000A5D0F8 /* FBReminderConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBReminderConstants.h; sourceTree = "<group>"; };
 		53D1E09C1CF9960100A5D0F8 /* FBNewReminderForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNewReminderForm.h; sourceTree = "<group>"; };
 		53D1E09D1CF9960100A5D0F8 /* FBNewReminderForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBNewReminderForm.m; sourceTree = "<group>"; };
+		53D1E0A21CFB279E00A5D0F8 /* FBNewReminderTimePickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNewReminderTimePickerTableViewCell.h; sourceTree = "<group>"; };
+		53D1E0A31CFB279E00A5D0F8 /* FBNewReminderTimePickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBNewReminderTimePickerTableViewCell.m; sourceTree = "<group>"; };
+		53D1E0A51CFB2A0300A5D0F8 /* KPTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPTimePicker.h; sourceTree = "<group>"; };
+		53D1E0A61CFB2A0300A5D0F8 /* KPTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPTimePicker.m; sourceTree = "<group>"; };
+		53D1E0A81CFB2A4500A5D0F8 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		53D1E0A91CFB2A4500A5D0F8 /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		53D1E0AC1CFB2A5B00A5D0F8 /* checkmark_icon_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark_icon_white.png; sourceTree = "<group>"; };
+		53D1E0AD1CFB2A5B00A5D0F8 /* checkmark_icon_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark_icon_white@2x.png"; sourceTree = "<group>"; };
+		53D1E0AE1CFB2A5B00A5D0F8 /* picker_wheel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picker_wheel@2x.png"; sourceTree = "<group>"; };
+		53D1E0AF1CFB2A5B00A5D0F8 /* picker_wheel_ip4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picker_wheel_ip4.png; sourceTree = "<group>"; };
+		53D1E0B01CFB2A5B00A5D0F8 /* picker_wheel_ip4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picker_wheel_ip4@2x.png"; sourceTree = "<group>"; };
+		53D1E0B11CFB2A5B00A5D0F8 /* round_backarrow_big-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round_backarrow_big-high.png"; sourceTree = "<group>"; };
+		53D1E0B21CFB2A5B00A5D0F8 /* round_backarrow_big-high@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round_backarrow_big-high@2x.png"; sourceTree = "<group>"; };
+		53D1E0B31CFB2A5B00A5D0F8 /* round_backarrow_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_backarrow_big.png; sourceTree = "<group>"; };
+		53D1E0B41CFB2A5B00A5D0F8 /* round_backarrow_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round_backarrow_big@2x.png"; sourceTree = "<group>"; };
+		53D1E0B51CFB2A5B00A5D0F8 /* schedule_image_moon-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule_image_moon-high.png"; sourceTree = "<group>"; };
+		53D1E0B61CFB2A5B00A5D0F8 /* schedule_image_moon-high@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule_image_moon-high@2x.png"; sourceTree = "<group>"; };
+		53D1E0B71CFB2A5B00A5D0F8 /* schedule_image_sun-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule_image_sun-high.png"; sourceTree = "<group>"; };
+		53D1E0B81CFB2A5B00A5D0F8 /* schedule_image_sun-high@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule_image_sun-high@2x.png"; sourceTree = "<group>"; };
 		5507FBFE4CFBC6B3BEA11110 /* Pods-FBReminderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBReminderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBReminderTests/Pods-FBReminderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		920095CC982D638E58426AEE /* Pods-FBReminderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBReminderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBReminderUITests/Pods-FBReminderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A5FF52626131FE70613B2CF5 /* libPods-FBReminder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FBReminder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +188,7 @@
 		5313CA671CEF59EC00381588 /* FBReminder */ = {
 			isa = PBXGroup;
 			children = (
+				53D1E09F1CFB271900A5D0F8 /* ThirdPartyLibrary */,
 				53D1E09B1CF9925000A5D0F8 /* FBReminderConstants.h */,
 				53B1A8011CF06586002DFB04 /* Resource */,
 				5313CAA21CEF5BED00381588 /* Model */,
@@ -214,6 +256,8 @@
 			children = (
 				5316E6DD1CEF5E2D006DC2B3 /* FBNewReminderViewController.h */,
 				5316E6DE1CEF5E2D006DC2B3 /* FBNewReminderViewController.m */,
+				537EB8E91CFB33B500085840 /* FBNewReminderDatePickerViewController.h */,
+				537EB8EA1CFB33B500085840 /* FBNewReminderDatePickerViewController.m */,
 			);
 			name = Create;
 			sourceTree = "<group>";
@@ -225,6 +269,10 @@
 				53B1A7FF1CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m */,
 				53D1E0971CF991D500A5D0F8 /* FBNewReminderDatePickerTableViewCell.h */,
 				53D1E0981CF991D500A5D0F8 /* FBNewReminderDatePickerTableViewCell.m */,
+				53D1E0A21CFB279E00A5D0F8 /* FBNewReminderTimePickerTableViewCell.h */,
+				53D1E0A31CFB279E00A5D0F8 /* FBNewReminderTimePickerTableViewCell.m */,
+				537EB8EC1CFB348700085840 /* FBPresentNavigationView.h */,
+				537EB8ED1CFB348700085840 /* FBPresentNavigationView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -235,6 +283,38 @@
 				53B1A8021CF06597002DFB04 /* Image.xcassets */,
 			);
 			name = Resource;
+			sourceTree = "<group>";
+		};
+		53D1E09F1CFB271900A5D0F8 /* ThirdPartyLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E0AB1CFB2A5B00A5D0F8 /* Images */,
+				53D1E0A81CFB2A4500A5D0F8 /* Categories.h */,
+				53D1E0A91CFB2A4500A5D0F8 /* Categories.m */,
+				53D1E0A51CFB2A0300A5D0F8 /* KPTimePicker.h */,
+				53D1E0A61CFB2A0300A5D0F8 /* KPTimePicker.m */,
+			);
+			name = ThirdPartyLibrary;
+			sourceTree = "<group>";
+		};
+		53D1E0AB1CFB2A5B00A5D0F8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				53D1E0AC1CFB2A5B00A5D0F8 /* checkmark_icon_white.png */,
+				53D1E0AD1CFB2A5B00A5D0F8 /* checkmark_icon_white@2x.png */,
+				53D1E0AE1CFB2A5B00A5D0F8 /* picker_wheel@2x.png */,
+				53D1E0AF1CFB2A5B00A5D0F8 /* picker_wheel_ip4.png */,
+				53D1E0B01CFB2A5B00A5D0F8 /* picker_wheel_ip4@2x.png */,
+				53D1E0B11CFB2A5B00A5D0F8 /* round_backarrow_big-high.png */,
+				53D1E0B21CFB2A5B00A5D0F8 /* round_backarrow_big-high@2x.png */,
+				53D1E0B31CFB2A5B00A5D0F8 /* round_backarrow_big.png */,
+				53D1E0B41CFB2A5B00A5D0F8 /* round_backarrow_big@2x.png */,
+				53D1E0B51CFB2A5B00A5D0F8 /* schedule_image_moon-high.png */,
+				53D1E0B61CFB2A5B00A5D0F8 /* schedule_image_moon-high@2x.png */,
+				53D1E0B71CFB2A5B00A5D0F8 /* schedule_image_sun-high.png */,
+				53D1E0B81CFB2A5B00A5D0F8 /* schedule_image_sun-high@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		5B4C1262B31375F7F2E80613 /* Frameworks */ = {
@@ -322,6 +402,7 @@
 				TargetAttributes = {
 					5313CA641CEF59EC00381588 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 2Z563XAPAC;
 					};
 					5313CA7D1CEF59ED00381588 = {
 						CreatedOnToolsVersion = 7.2;
@@ -358,9 +439,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D1E0C41CFB2A5B00A5D0F8 /* schedule_image_sun-high.png in Resources */,
+				53D1E0BB1CFB2A5B00A5D0F8 /* picker_wheel@2x.png in Resources */,
+				53D1E0BC1CFB2A5B00A5D0F8 /* picker_wheel_ip4.png in Resources */,
+				53D1E0BD1CFB2A5B00A5D0F8 /* picker_wheel_ip4@2x.png in Resources */,
+				53D1E0C11CFB2A5B00A5D0F8 /* round_backarrow_big@2x.png in Resources */,
+				53D1E0B91CFB2A5B00A5D0F8 /* checkmark_icon_white.png in Resources */,
 				5313CA781CEF59ED00381588 /* LaunchScreen.storyboard in Resources */,
+				53D1E0C21CFB2A5B00A5D0F8 /* schedule_image_moon-high.png in Resources */,
+				53D1E0C01CFB2A5B00A5D0F8 /* round_backarrow_big.png in Resources */,
+				53D1E0C31CFB2A5B00A5D0F8 /* schedule_image_moon-high@2x.png in Resources */,
+				53D1E0BA1CFB2A5B00A5D0F8 /* checkmark_icon_white@2x.png in Resources */,
 				53B1A8031CF06597002DFB04 /* Image.xcassets in Resources */,
+				53D1E0C51CFB2A5B00A5D0F8 /* schedule_image_sun-high@2x.png in Resources */,
+				53D1E0BF1CFB2A5B00A5D0F8 /* round_backarrow_big-high@2x.png in Resources */,
 				5313CA751CEF59ED00381588 /* Assets.xcassets in Resources */,
+				53D1E0BE1CFB2A5B00A5D0F8 /* round_backarrow_big-high.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,10 +602,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D1E0AA1CFB2A4500A5D0F8 /* Categories.m in Sources */,
 				53D1E0991CF991D500A5D0F8 /* FBNewReminderDatePickerTableViewCell.m in Sources */,
 				5313CAA51CEF5C0600381588 /* FBReminderItem.m in Sources */,
+				537EB8EE1CFB348700085840 /* FBPresentNavigationView.m in Sources */,
+				53D1E0A41CFB279E00A5D0F8 /* FBNewReminderTimePickerTableViewCell.m in Sources */,
 				53D1E09E1CF9960100A5D0F8 /* FBNewReminderForm.m in Sources */,
+				537EB8EB1CFB33B500085840 /* FBNewReminderDatePickerViewController.m in Sources */,
 				5313CAA11CEF5B8C00381588 /* FBMainViewController.m in Sources */,
+				53D1E0A71CFB2A0300A5D0F8 /* KPTimePicker.m in Sources */,
 				5316E6DF1CEF5E2D006DC2B3 /* FBNewReminderViewController.m in Sources */,
 				53B1A8001CF05F29002DFB04 /* FBNewReminderTitleTableViewCell.m in Sources */,
 				5313CA6D1CEF59EC00381588 /* AppDelegate.m in Sources */,
@@ -649,11 +748,14 @@
 			baseConfigurationReference = BCD4FB1DCE7185C354B3F4D5 /* Pods-FBReminder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FBReminder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "FB-Corp..FBReminder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -662,11 +764,14 @@
 			baseConfigurationReference = 2089BDFAD117AAC753E968DC /* Pods-FBReminder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FBReminder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "FB-Corp..FBReminder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

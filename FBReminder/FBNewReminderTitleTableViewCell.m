@@ -11,6 +11,7 @@
 #import <Masonry/Masonry.h>
 #import "FBReminderConstants.h"
 
+
 @interface FBNewReminderTitleTableViewCell () <UITextViewDelegate>
 
 @property (nonatomic) RPFloatingPlaceholderTextView *textView;
@@ -25,6 +26,7 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self.contentView addSubview:self.textView];
         
+        self.textView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView).insets(UIEdgeInsetsMake(28, 3, 8, 3));
             self.heightConstraint = make.height.equalTo(@0);
@@ -51,7 +53,8 @@
 {
 #warning TODO:
     CGSize newSize = [self.textView sizeThatFits:CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), CGFLOAT_MAX)];
-    self.heightConstraint.offset = newSize.height + 30;
+    self.heightConstraint.offset = newSize.height + 18;
+//    NSLog(@"update size height :%f", self.heightConstraint.offset);
 }
 
 #pragma mark - Getters & Setters -

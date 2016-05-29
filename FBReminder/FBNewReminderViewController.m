@@ -50,6 +50,11 @@
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+- (void)endEditing
+{
+    [self.tableView endEditing:YES];
+}
+
 #pragma mark - Private -
 #pragma mark - Event Handler
 - (void)submitButtonTapped:(UIButton *)submitButton

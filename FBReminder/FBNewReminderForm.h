@@ -13,6 +13,7 @@
 
 - (void)updateTableViewHeight;
 - (void)reloadCellAtIndexPath:(NSIndexPath *)indexPath;
+- (void)endEditing;
 
 @end
 

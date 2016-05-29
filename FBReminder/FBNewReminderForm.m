@@ -9,10 +9,13 @@
 #import "FBNewReminderForm.h"
 #import "FBNewReminderTitleTableViewCell.h"
 #import "FBNewReminderDatePickerTableViewCell.h"
+#import "FBNewReminderTimePickerTableViewCell.h"
+#import "KPTimePicker.h"
+#import "FBNewReminderDatePickerViewController.h"
 #import <PDTSimpleCalendar/PDTSimpleCalendar.h>
 #import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 
-@interface FBNewReminderForm () <FBNewReminderTitleTableViewCellDelegate, PDTSimpleCalendarViewDelegate>
+@interface FBNewReminderForm () <FBNewReminderTitleTableViewCellDelegate, PDTSimpleCalendarViewDelegate, KPTimePickerDelegate>
 
 @property (nonatomic) NSArray<NSArray *> *sections;
 
@@ -20,7 +23,10 @@
 @property (nonatomic) NSString *titleText;
 // date
 @property (nonatomic) NSDate *date;
-@property (nonatomic) PDTSimpleCalendarViewController *datePickerVC;
+@property (nonatomic) FBNewReminderDatePickerViewController *datePickerVC;
+// time
+@property (nonatomic) NSDate *time;
+@property (nonatomic) KPTimePicker *timePickerView;
 
 @end
 
@@ -37,6 +43,9 @@
                               ],
                           @[
                               [FBNewReminderDatePickerTableViewCell class]
+                              ],
+                          @[
+                              [FBNewReminderTimePickerTableViewCell class]
                               ]
                           ];
     }
@@ -73,6 +82,12 @@
         formatter.dateFormat = @"yyyy-MM-dd";
         NSDate *dateToShow = self.date ? : [NSDate date];
         dateCell.titleLabel.text = [formatter stringFromDate:dateToShow];
+    } else if (cellClass == [FBNewReminderTimePickerTableViewCell class]) {
+        FBNewReminderTimePickerTableViewCell *timeCell = (FBNewReminderTimePickerTableViewCell *)cell;
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"HH:mm";
+        NSDate *dateToShow = self.time ? : [NSDate date];
+        timeCell.titleLabel.text = [formatter stringFromDate:dateToShow];
     }
 }
 
@@ -118,9 +133,11 @@
 {
     Class cellClass = [self cellClassFromIndexPath:indexPath];
     if (cellClass == [FBNewReminderDatePickerTableViewCell class]) {
-        self.datePickerVC = [[PDTSimpleCalendarViewController alloc] init];
-        self.datePickerVC.delegate = self;
-        [self.vc.navigationController pushViewController:self.datePickerVC animated:YES];
+        [self.vc endEditing];
+        [self.vc presentViewController:self.datePickerVC animated:YES completion:nil];
+    } else if (cellClass == [FBNewReminderTimePickerTableViewCell class]) {
+        [self.vc endEditing];
+        [self.vc.view addSubview:self.timePickerView];
     }
 }
 
@@ -135,8 +152,16 @@
 - (void)simpleCalendarViewController:(PDTSimpleCalendarViewController *)controller didSelectDate:(NSDate *)date
 {
     self.date = date;
-    [self.vc.navigationController popViewControllerAnimated:YES];
+    [self.datePickerVC dismissViewControllerAnimated:YES completion:nil];
     [self.vc reloadCellAtIndexPath:[self indexPathForCellClass:[FBNewReminderDatePickerTableViewCell class]]];
+}
+
+#pragma mark - KPTimePickerDelegate
+-(void)timePicker:(KPTimePicker*)timePicker selectedDate:(NSDate *)date
+{
+    self.time = date;
+    [self.timePickerView removeFromSuperview];
+    [self.vc reloadCellAtIndexPath:[self indexPathForCellClass:[FBNewReminderTimePickerTableViewCell class]]];
 }
 
 #pragma mark - Private -
@@ -152,6 +177,25 @@
     }
     NSAssert(NO, @"wrong cell class");
     return nil;
+}
+
+#pragma mark - Getters -
+- (FBNewReminderDatePickerViewController *)datePickerVC
+{
+    if (!_datePickerVC) {
+        _datePickerVC = [[FBNewReminderDatePickerViewController alloc] init];
+        _datePickerVC.calendarVC.delegate = self;
+    }
+    return _datePickerVC;
+}
+
+- (KPTimePicker *)timePickerView
+{
+    if (!_timePickerView) {
+        _timePickerView = [[KPTimePicker alloc] init];
+        _timePickerView.delegate = self;
+    }
+    return _timePickerView;
 }
 
 @end
