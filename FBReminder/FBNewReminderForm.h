@@ -12,6 +12,7 @@
 @protocol FBNewReminderFormDelegate <NSObject>
 
 - (void)updateTableViewHeight;
+- (void)reloadCellAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

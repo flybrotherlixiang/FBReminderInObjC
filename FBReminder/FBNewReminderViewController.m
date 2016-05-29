@@ -45,6 +45,11 @@
     [self.tableView endUpdates];
 }
 
+- (void)reloadCellAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 #pragma mark - Private -
 #pragma mark - Event Handler
 - (void)submitButtonTapped:(UIButton *)submitButton

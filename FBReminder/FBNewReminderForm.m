@@ -12,12 +12,15 @@
 #import <PDTSimpleCalendar/PDTSimpleCalendar.h>
 #import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 
-@interface FBNewReminderForm () <FBNewReminderTitleTableViewCellDelegate>
+@interface FBNewReminderForm () <FBNewReminderTitleTableViewCellDelegate, PDTSimpleCalendarViewDelegate>
 
 @property (nonatomic) NSArray<NSArray *> *sections;
 
+// title
 @property (nonatomic) NSString *titleText;
+// date
 @property (nonatomic) NSDate *date;
+@property (nonatomic) PDTSimpleCalendarViewController *datePickerVC;
 
 @end
 
@@ -68,7 +71,8 @@
         FBNewReminderDatePickerTableViewCell *dateCell = (FBNewReminderDatePickerTableViewCell *)cell;
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.dateFormat = @"yyyy-MM-dd";
-        dateCell.titleLabel.text = [formatter stringFromDate:[NSDate date]];
+        NSDate *dateToShow = self.date ? : [NSDate date];
+        dateCell.titleLabel.text = [formatter stringFromDate:dateToShow];
     }
 }
 
@@ -114,8 +118,9 @@
 {
     Class cellClass = [self cellClassFromIndexPath:indexPath];
     if (cellClass == [FBNewReminderDatePickerTableViewCell class]) {
-        PDTSimpleCalendarViewController *vc = [[PDTSimpleCalendarViewController alloc] init];
-        [self.vc.navigationController pushViewController:vc animated:YES];
+        self.datePickerVC = [[PDTSimpleCalendarViewController alloc] init];
+        self.datePickerVC.delegate = self;
+        [self.vc.navigationController pushViewController:self.datePickerVC animated:YES];
     }
 }
 
@@ -124,6 +129,29 @@
 {
     self.titleText = textView.text;
     [self.vc updateTableViewHeight];
+}
+
+#pragma mark - PDTSimpleCalendarViewDelegate
+- (void)simpleCalendarViewController:(PDTSimpleCalendarViewController *)controller didSelectDate:(NSDate *)date
+{
+    self.date = date;
+    [self.vc.navigationController popViewControllerAnimated:YES];
+    [self.vc reloadCellAtIndexPath:[self indexPathForCellClass:[FBNewReminderDatePickerTableViewCell class]]];
+}
+
+#pragma mark - Private -
+- (NSIndexPath *)indexPathForCellClass:(Class)cellClass
+{
+    for (int i = 0;i < self.sections.count;i++) {
+        NSArray *section = self.sections[i];
+        for (int j = 0; j < section.count; j++) {
+            if (cellClass == section[j]) {
+                return [NSIndexPath indexPathForRow:j inSection:i];
+            }
+        }
+    }
+    NSAssert(NO, @"wrong cell class");
+    return nil;
 }
 
 @end
